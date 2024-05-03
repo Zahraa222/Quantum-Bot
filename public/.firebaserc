@@ -1,0 +1,6 @@
+{
+  "projects"; {
+    "default"; "quantumbot-df1e3",
+    "test"; "quantumbot-df1e3"
+  }
+}
