@@ -21,8 +21,21 @@ exports.addMessage = functions.https.onCall(async (data, context) => {
             timestamp: admin.firestore.FieldValue.serverTimestamp()
         };
 
+        //add message to the user's message subcollection in firestore
+        const messageRef = await admin.firestore().collection("chats").doc(userId).collection("messages").add(messageData);
+        logger.log("Message added, message ID: ", messageRef.id);
+
+
+        //return success status and message ID
+        return {
+            status: "success",
+            messageId: messageRef.id
+        };
     
 
     } catch (error) {
-        logger.error("Error", error);
-    }});
+        logger.error("Error adding message: ", error);
+        //throw error to client
+        throw new functions.https.HttpsError("unknown", "An error occurred while adding the message", error.message);
+    }
+});
