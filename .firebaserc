@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "quantum-bot-9760b",
+    "test": "quantum-bot-9760b"
+  }
+}

@@ -13,20 +13,6 @@
       "predeploy": [
         "npm --prefix \"$RESOURCE_DIR\" run lint"
       ]
-    },
-    {
-      "source": "quantum-bot-9760b",
-      "codebase": "quantum-bot-9760b",
-      "ignore": [
-        "node_modules",
-        ".git",
-        "firebase-debug.log",
-        "firebase-debug.*.log",
-        "*.local"
-      ],
-      "predeploy": [
-        "npm --prefix \"$RESOURCE_DIR\" run lint"
-      ] 
     }
   ],
   "emulators": {
