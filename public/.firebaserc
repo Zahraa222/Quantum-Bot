@@ -1,6 +1,5 @@
 {
-  "projects"; {
-    "default"; "quantumbot-df1e3",
-    "test"; "quantumbot-df1e3"
+  "projects": {
+    "default": "quantum-bot-9760b"
   }
 }
